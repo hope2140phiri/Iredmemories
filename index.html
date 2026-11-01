@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IRED Memories ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>❤️ IRED Memories</h1>
+    <p>Every picture tells a beautiful story</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#messages">Messages</a>
+    <a href="#music">Music</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>Welcome to IRED Memories 🌹</h2>
+    <p>
+        A special place where beautiful moments
+        become unforgettable memories.
+    </p>
+    <br>
+    <a href="#gallery" class="button">Explore Memories ❤️</a>
+</div>
+
+<section id="gallery">
+
+    <h2>📸 Our Beautiful Gallery</h2>
+
+    <div class="gallery">
+
+        <div class="photo-card">
+            <img src="images/photo1.jpg"
+                 alt="Memory 1"
+                 onclick="openPhoto(this.src)">
+
+            <h3>Beautiful Memory ❤️</h3>
+
+            <button onclick="likePhoto(this)">
+                ❤️ <span>0</span>
+            </button>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo2.jpg"
+                 alt="Memory 2"
+                 onclick="openPhoto(this.src)">
+
+            <h3>Special Moment 💕</h3>
+
+            <button onclick="likePhoto(this)">
+                ❤️ <span>0</span>
+            </button>
+        </div>
+
+    </div>
+
+    <h3>➕ Add Your Own Pictures</h3>
+
+    <input type="file"
+           id="photoUpload"
+           accept="image/*"
+           multiple
+           onchange="uploadPhotos(event)">
+
+</section>
+
+<div id="photoViewer" onclick="closePhoto()">
+    <span>&times;</span>
+    <img id="fullPhoto">
+</div>
+
+<section id="messages">
+
+    <h2>💌 Special Messages</h2>
+
+    <div class="message">
+        Every moment is precious.
+        Every memory is a treasure.
+        Keep the beautiful memories alive. ❤️
+    </div>
+
+    <h3>Leave a Message 💕</h3>
+
+    <input type="text"
+           id="visitorName"
+           placeholder="Your name">
+
+    <br><br>
+
+    <textarea id="visitorMessage"
+              placeholder="Write your special message..."></textarea>
+
+    <br><br>
+
+    <button onclick="sendMessage()">Send Message ❤️</button>
+
+    <div id="messageList"></div>
+
+</section>
+
+<section id="music">
+
+    <h2>🎵 Memories Music</h2>
+
+    <p>Enjoy beautiful music while exploring.</p>
+
+    <audio controls>
+        <source src="images/music.mp3" type="audio/mpeg">
+    </audio>
+
+</section>
+
+<footer>
+    <h3>❤️ IRED Memories</h3>
+    <p>Beautiful moments. Endless memories.</p>
+    <p>Made with love 💕</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
